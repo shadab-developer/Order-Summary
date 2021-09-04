@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- displays site properly based on user's device -->
 
     <link
@@ -12,32 +18,111 @@
       href="./images/favicon-32x32.png"
     />
 
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        line-height: 1;
+        color: #555;
+        overflow-x: hidden;
+      }
+      .section-order {
+        margin: 0 auto;
+        box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.09);
+        width: 400px;
+        height: 600px;
+        margin-top: 5rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+      }
+      .hero-img {
+        width: 100%;
+        border-radius: 10px 10px 0px 0px;
+      }
+      .summary {
+        padding: 4.8rem;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        margin-top: 3rem;
+        gap: 1.5rem;
+      }
+      .btn {
+        height: 5.5rem;
+        border: none;
+        font-weight: 900;
+        border-radius: 15px;
+        cursor: pointer;
+      }
+      .order-btn {
+        background-color: hsl(245, 75%, 52%);
+        color: white;
+      }
+      .order-btn:hover,
+      .order-btn:visited {
+        background-color: hsl(225, 71%, 70%);
+      }
+      .cancel-btn {
+        color: black;
+        background: none;
+      }
+      .order-title {
+        color: hsl(223, 47%, 23%);
+        font-size: 3rem;
+        font-weight: 900;
+        text-align: center;
+      }
+      .order-details {
+        font-size: 1.5rem;
+        text-align: center;
+        color: hsl(224, 23%, 55%);
+        font-weight: 500;
+        line-height: 2;
+      }
+      .attribution {
+        margin-top: 1.5rem;
+      }
+    </style>
+
     <title>Frontend Mentor | Order summary card</title>
   </head>
   <body>
-    <div class="container">
-      <h1>Order Summary</h1>
+    <section class="section-order">
+      <img src="images/illustration-hero.svg" class="hero-img" alt="Hero IMG" />
+      <div class="summary">
+        <div class="content">
+          <h1 class="order-title">Order Summary</h1>
 
-      <p>
-        You can now listen to millions of songs, audiobooks, and podcasts on any
-        device anywhere you like!
-      </p>
-
-      <div>
-        <p>Annual Plan $59.99/year</p>
-        <p>Change</p>
+          <p class="order-details">
+            You can now listen to millions of songs, audiobooks, and podcasts on
+            any device anywhere you like!
+          </p>
+        </div>
+        <div class="buttons">
+          <button class="btn order-btn">Processed to payment</button>
+          <button class="btn cancel-btn">Cancel Order</button>
+        </div>
       </div>
-
-      <button>Proceed to Payment</button>
-
-      <button>Cancel Order</button>
-    </div>
-
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Shadab Ahmad (WebyRoot Private Limited)</a>.
-    </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Shadab Ahmad (WebyRoot Private Limited)</a>.
+      </div>
+    </section>
   </body>
 </html>
